@@ -46,3 +46,10 @@ def add_book(books):
     books.append({"title": title, "author": author, "status": "available"})
     save_books(books)
     print("Book Added Successfully!")
+def view_books(books):
+    if not books:
+        print("No books available in the library.")
+        return
+    print("Available Books:")
+    for idx, b in enumerate(books, start=1):
+        print(f"{idx}. {b['title']} by {b['author']} - [{b['status']}]")
