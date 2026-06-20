@@ -42,7 +42,6 @@ automatically.
 - Menu Driven Program
 
 ## Project Structure
-``
 Library_Management_System/
 ├── library.py
 ├── books.txt
