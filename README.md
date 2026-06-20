@@ -53,7 +53,6 @@ Library_Management_System/
 
 ## Sample Output
 
-```
 Welcome to Library Management System
 
 1. Add Book
@@ -75,7 +74,6 @@ Enter Choice: 4
 Enter Book Name: Python Programming
 Enter Your Name: Sravya
 Book Issued Successfully!
-```
 
 ## Submission Requirements
 
