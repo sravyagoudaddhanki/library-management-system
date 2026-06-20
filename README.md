@@ -42,8 +42,12 @@ automatically.
 - Menu Driven Program
 
 ## Project Structure
+
+```
 Library_Management_System/
 ├── library.py
 ├── books.txt
 ├── issued_books.txt
+└── README.md
+```
 └── README.md
