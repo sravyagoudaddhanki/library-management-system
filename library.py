@@ -88,3 +88,38 @@ def return_book(books, issued):
             print("Book Returned Successfully!")
             return
     print("This book was not issued or does not exist.")
+def main():
+    books = load_books()
+    issued = load_issued()
+
+    print("Welcome to Library Management System")
+
+    while True:
+        print("\n1. Add Book")
+        print("2. View Books")
+        print("3. Search Book")
+        print("4. Issue Book")
+        print("5. Return Book")
+        print("6. Exit")
+
+        choice = input("Enter Choice: ").strip()
+
+        if choice == "1":
+            add_book(books)
+        elif choice == "2":
+            view_books(books)
+        elif choice == "3":
+            search_book(books)
+        elif choice == "4":
+            issue_book(books, issued)
+        elif choice == "5":
+            return_book(books, issued)
+        elif choice == "6":
+            print("Thank you for using Library Management System. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 6.")
+
+
+if __name__ == "__main__":
+    main()
