@@ -62,3 +62,18 @@ def search_book(books):
             print(f"{idx}. {b['title']} by {b['author']} - [{b['status']}]")
     else:
         print("No matching books found.")
+def issue_book(books, issued):
+    title = input("Enter Book Name: ").strip()
+    for b in books:
+        if b["title"].lower() == title.lower():
+            if b["status"] == "available":
+                user = input("Enter Your Name: ").strip()
+                b["status"] = "issued"
+                issued.append({"title": b["title"], "user": user})
+                save_books(books)
+                save_issued(issued)
+                print("Book Issued Successfully!")
+            else:
+                print("Sorry, this book is already issued.")
+            return
+    print("Book not found.")
