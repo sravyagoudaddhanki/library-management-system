@@ -77,3 +77,14 @@ def issue_book(books, issued):
                 print("Sorry, this book is already issued.")
             return
     print("Book not found.")
+def return_book(books, issued):
+    title = input("Enter Book Name: ").strip()
+    for b in books:
+        if b["title"].lower() == title.lower() and b["status"] == "issued":
+            b["status"] = "available"
+            issued[:] = [i for i in issued if i["title"].lower() != title.lower()]
+            save_books(books)
+            save_issued(issued)
+            print("Book Returned Successfully!")
+            return
+    print("This book was not issued or does not exist.")
