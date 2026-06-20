@@ -20,3 +20,22 @@ def save_books(books):
     with open(BOOKS_FILE, "w") as f:
         for b in books:
             f.write(f"{b['title']},{b['author']},{b['status']}\n")
+
+def load_issued():
+    issued = []
+    if os.path.exists(ISSUED_FILE):
+        with open(ISSUED_FILE, "r") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    parts = line.split(",")
+                    if len(parts) == 2:
+                        title, user = parts
+                        issued.append({"title": title, "user": user})
+    return issued
+
+
+def save_issued(issued):
+    with open(ISSUED_FILE, "w") as f:
+        for i in issued:
+            f.write(f"{i['title']},{i['user']}\n")
