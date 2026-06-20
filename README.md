@@ -50,4 +50,52 @@ Library_Management_System/
 ├── books.txt
 ├── issued_books.txt
 └── README.md
-└── README.md
+
+## Sample Output
+
+```
+Welcome to Library Management System
+
+1. Add Book
+2. View Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter Choice: 1
+Enter Book Name: Python Programming
+Enter Author Name: John Smith
+Book Added Successfully!
+
+Enter Choice: 2
+Available Books:
+1. Python Programming by John Smith - [available]
+
+Enter Choice: 4
+Enter Book Name: Python Programming
+Enter Your Name: Sravya
+Book Issued Successfully!
+```
+
+## Submission Requirements
+
+- Python Source Code
+- Output Screenshots
+- Project Report
+- README File
+
+## Optional Features
+
+- Book Categories
+- Student Login System
+- Due Date Management
+- Fine Calculation
+- Book Availability Status
+- Search by ISBN Number
+- Colored Output
+
+## Author
+
+Think Champ Internship - Python with Generative AI (May 2026)
+
+
