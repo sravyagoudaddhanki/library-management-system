@@ -53,3 +53,12 @@ def view_books(books):
     print("Available Books:")
     for idx, b in enumerate(books, start=1):
         print(f"{idx}. {b['title']} by {b['author']} - [{b['status']}]")
+def search_book(books):
+    keyword = input("Enter Title or Author to search: ").strip().lower()
+    results = [b for b in books if keyword in b["title"].lower() or keyword in b["author"].lower()]
+    if results:
+        print("Search Results:")
+        for idx, b in enumerate(results, start=1):
+            print(f"{idx}. {b['title']} by {b['author']} - [{b['status']}]")
+    else:
+        print("No matching books found.")
