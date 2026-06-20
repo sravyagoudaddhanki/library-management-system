@@ -39,3 +39,10 @@ def save_issued(issued):
     with open(ISSUED_FILE, "w") as f:
         for i in issued:
             f.write(f"{i['title']},{i['user']}\n")
+
+def add_book(books):
+    title = input("Enter Book Name: ").strip()
+    author = input("Enter Author Name: ").strip()
+    books.append({"title": title, "author": author, "status": "available"})
+    save_books(books)
+    print("Book Added Successfully!")
